@@ -65,6 +65,7 @@ namespace MCD_KullaniciGirisUygulamasi
             this.btnGirisYap.TabIndex = 2;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // txtKullaniciAd
             // 
@@ -93,6 +94,7 @@ namespace MCD_KullaniciGirisUygulamasi
             this.Controls.Add(this.lblKullaniciAd);
             this.Name = "Form1";
             this.Text = "Giriş Ekranı";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

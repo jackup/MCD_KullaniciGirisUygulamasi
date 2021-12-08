@@ -16,5 +16,23 @@ namespace MCD_KullaniciGirisUygulamasi
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnGirisYap_Click(object sender, EventArgs e)
+        {
+            string kAdi = txtKullaniciAd.Text;
+            string sifre = txtSifre.Text;
+
+            Kullanici bulunanKullanici = VirtualDatabase.kTablo.Find(i => i.kullaniciAdi == kAdi && i.sifre == sifre);
+
+            if (bulunanKullanici != null)
+            {
+                AnaForm anaForm = new AnaForm(bulunanKullanici);
+            }
+        }
     }
 }
